@@ -10,3 +10,185 @@
 .btn {
   display: none !important;
 }
+
+.floating {
+  position: fixed;
+  top: 100px;
+  right: 10px;
+}
+
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #e9e5df;
+  border-top: none;
+
+  text-align: left;
+  padding: 10px;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #e9e5df;
+  background-color: #e9e5df;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab button {
+  background-color: inherit;
+  color: #909090;
+  font-weight: bold;
+  font-size: 1em;
+
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: white;
+}
+ 
+
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: #d44ea7;
+  background-image: linear-gradient(120deg, #d44ea7, #3f5dd6);
+  padding: 2rem 10rem;
+}
+
+.project-name {
+  font-size: 3.25rem;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  background: url(/assets/img/logo-reverse.png) 0 repeat-y;
+  background-size: 130px;
+}
+
+footer {
+  text-align: center;
+}
+
+
+.left {
+  width: 50%;
+  
+}
+
+.right {
+  width: 50%;
+  text-align: right;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.project-tagline {
+  display: none;
+}
+
+
+h1:before {
+  content: 'PalmerIT';
+}
+
+
+a.mail-button::after {
+  content: 'Get in touch';
+}
+
+@media screen and (max-width: 800px) {
+
+  a.mail-button::after {
+    content: '✉️';
+  }
+
+  .column {
+    width: 100%;
+    text-align: center;
+    float: center;
+    padding: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .left {
+    text-align: center;
+  }
+  .right {
+    text-align: center;
+  }
+
+  .project-name {
+    background-position: center; 
+    background-size: 110px;
+  }
+
+  h1:before {
+    content: '.';
+    
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: -10px;
+}
+
+.centre {
+  text-align: center;
+}
+
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  font-weight: 800;
+  border-radius: 30px;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(90deg, #4235d0 0%, #f969cd 167%);
+  transition: all .25s ease;
+  font-size: 16px;
+  padding: 16px 24px;
+}
+
+.button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 0.35s;
+  background: linear-gradient(90deg, #4235d0 0%, #f969cd 107%);
+}
